@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .rain-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    z-index: 1000;
+  }
+
+  
+  .drop {
+    position: absolute;
+    top: -150px; 
+    width: 2px;
+    height: 120px;
+    background: linear-gradient(transparent, #0ff); 
+    filter: drop-shadow(0 0 8px #0ff); 
+    animation: rain-fall linear infinite;
+  }
+    @keyframes rain-fall {
+    to {
+      transform: translateY(calc(100vh + 150px));
+    }
+  }
+  .drop:nth-child(1) { left: 5%;  animation-duration: 2s; animation-delay: 0s;  background: linear-gradient(transparent, #ff00ff); filter: drop-shadow(0 0 8px #ff00ff); }
+  .drop:nth-child(2) { left: 15%; animation-duration: 1.5s; animation-delay: 0.5s; }
+  .drop:nth-child(3) { left: 25%; animation-duration: 2.5s; animation-delay: 1.2s; background: linear-gradient(transparent, #00ff00); filter: drop-shadow(0 0 8px #00ff00); }
+  .drop:nth-child(4) { left: 35%; animation-duration: 1.8s; animation-delay: 0.2s; }
+  .drop:nth-child(5) { left: 45%; animation-duration: 2.2s; animation-delay: 0.8s; background: linear-gradient(transparent, #ffff00); filter: drop-shadow(0 0 8px #ffff00); }
+  .drop:nth-child(6) { left: 55%; animation-duration: 1.6s; animation-delay: 0.3s; }
+  .drop:nth-child(7) { left: 65%; animation-duration: 2.4s; animation-delay: 1.5s; background: linear-gradient(transparent, #ff3300); filter: drop-shadow(0 0 8px #ff3300); }
+  .drop:nth-child(8) { left: 75%; animation-duration: 1.9s; animation-delay: 0.6s; }
+  .drop:nth-child(9) { left: 85%; animation-duration: 2.1s; animation-delay: 0.1s; background: linear-gradient(transparent, #00ffff); filter: drop-shadow(0 0 8px #00ffff); }
+  .drop:nth-child(10){ left: 95%; animation-duration: 1.7s; animation-delay: 0.9s; }
+</style>
+<body>
+    <div class="box">
+        <span class="borderLine"></span>
+        <form>
+            <h2>Sign in</h2>
+            <div class="inputBox">
+                <input type="username" required="required">
+                <span>Username</span>
+                <i></i>
+               </div>
+            <div class="inputBox">
+                <input type="password" required="required">
+                <span>Password</span>
+                <i></i>
+            </div>
+            <div class="links">
+                <a href="#">Forgot Password</a>
+                <a href="#">Signup</a>
+            </div>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+   <div class="footer-text assemble-text">
+    <span><sup>&copy;</sup></span>
+    <span>C</span><span>r</span><span>e</span><span>a</span><span>t</span><span>e</span><span>d</span>
+    <span>B</span><span>y</span> 
+    <span>D</span><span>h</span><span>r</span><span>u<span>v</span><span>.</span>
+</div>
+<div class="rain-wrapper">
+    <div class="drop"></div>
+    <div class="drop"></div>
+    <div class="drop"></div>
+    <div class="drop"></div>
+    <div class="drop"></div>
+    <div class="drop"></div>
+    <div class="drop"></div>
+    <div class="drop"></div>
+    <div class="drop"></div>
+    <div class="drop"></div>
+  </div>
+</body>
+</html>
